@@ -132,10 +132,10 @@ while True:
                         first_date = df_1h['timestamp'].head(1)
                         df_1h["timestamp"] = [datetime.fromtimestamp(x) for x in df_1h["timestamp"]/1000]
 
-                        Ema_12 = EMAIndicator(df_1h["close"], float(EMA_12))
+                        Ema_12 = EMAIndicator(df_1h["close"], float(12))
                         df_1h["EMA_12"] = Ema_12.ema_indicator()
 
-                        Ema_26 = EMAIndicator(df_1h["close"], float(EMA_26))
+                        Ema_26 = EMAIndicator(df_1h["close"], float(26))
                         df_1h["EMA_26"] = Ema_26.ema_indicator()
 
                         df_1h.ta.sma(length=50, append=True)
@@ -149,10 +149,10 @@ while True:
                         first_date = df_6h['timestamp'].head(1)
                         df_6h["timestamp"] = [datetime.fromtimestamp(x) for x in df_6h["timestamp"]/1000]
 
-                        Ema_12 = EMAIndicator(df_6h["close"], float(EMA_12))
+                        Ema_12 = EMAIndicator(df_6h["close"], float(12))
                         df_6h["EMA_12"] = Ema_12.ema_indicator()
 
-                        Ema_26 = EMAIndicator(df_6h["close"], float(EMA_26))
+                        Ema_26 = EMAIndicator(df_6h["close"], float(26))
                         df_6h["EMA_26"] = Ema_26.ema_indicator()
 
                         df_6h.ta.sma(length=50, append=True)
@@ -186,10 +186,10 @@ while True:
                             first_date = df['timestamp'].head(1)
                             df["timestamp"] = [datetime.fromtimestamp(x) for x in df["timestamp"]/1000]
 
-                            Ema_12 = EMAIndicator(df["close"], float(EMA_12))
+                            Ema_12 = EMAIndicator(df["close"], float(12))
                             df["EMA_12"] = Ema_12.ema_indicator()
 
-                            Ema_26 = EMAIndicator(df["close"], float(EMA_26))
+                            Ema_26 = EMAIndicator(df["close"], float(26))
                             df["EMA_26"] = Ema_26.ema_indicator()
 
                             df.ta.sma(length=50, append=True)
